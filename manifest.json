@@ -9,7 +9,7 @@
   ],
   "content_scripts": [
     {
-      "matches": ["https://school.mos.ru/*"],
+      "matches": ["https://school.mos.ru/diary/marks/rating"],
       "js": ["content.js"],
       "run_at": "document_end"
     }
@@ -18,6 +18,6 @@
     "service_worker": "background.js"
   },
   "host_permissions": [
-    "https://tubik-corp.ru/*"
+    "https://school.tubik-corp.ru/*"
   ]
 }
