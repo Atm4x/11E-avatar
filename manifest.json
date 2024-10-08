@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "Replace Image Href for school.mos.ru",
-  "version": "1.1",
-  "description": "Заменяет href атрибутов <image> с определёнными clip-path на заданную ссылку на сайте school.mos.ru.",
+  "version": "1.2",
+  "description": "Заменяет href атрибутов <image> с определёнными clip-path на заданную ссылку на сайте school.mos.ru, используя данные с сервера.",
   "permissions": [
     "activeTab",
     "scripting"
@@ -14,10 +14,10 @@
       "run_at": "document_end"
     }
   ],
-  "web_accessible_resources": [
-    {
-      "resources": ["KNOWN_IDS.txt"],
-      "matches": ["https://school.mos.ru/*"]
-    }
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": [
+    "https://tubik-corp.ru/*"
   ]
 }
